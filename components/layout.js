@@ -28,29 +28,31 @@ export default function Layout({ children, home }) {
             <header className={styles.header}>
                 {home ? (
                     <>
-                        <Image
-                            priority
-                            src="/images/profile.jpeg"
-                            className={utilStyles.borderCircle}
-                            height={160}
-                            width={160}
-                            alt=""
-                        />
+                        <div className={utilStyles.backgroundColor}>
+                            <Image
+                                priority
+                                src="/images/profile2.svg"
+                                className={utilStyles.borderCircle}
+                                height={144}
+                                width={144}
+                                alt=""
+                            />
+                        </div>
                         <h1 className={utilStyles.heading2Xl}>{name}</h1>
                     </>
                 ) : (
                     <>
-                        <Link href="/">
+                        <Link href="/" className={utilStyles.backgroundColor}>
                             <Image
                                 priority
-                                src="/images/profile.jpeg"
+                                src="/images/profile2.svg"
                                 className={utilStyles.borderCircle}
-                                height={160}
-                                width={160}
+                                height={144}
+                                width={144}
                                 alt=""
                             />
                         </Link>
-                        <h2 className={utilStyles.headingLg}>
+                        <h2 className={utilStyles.heading2Xl}>
                             <Link href="/" className={utilStyles.colorInherit}>
                                 {name}
                             </Link>
